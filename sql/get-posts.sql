@@ -9,4 +9,5 @@ SELECT
   FROM posts
   LEFT OUTER JOIN users
     ON posts.posted_by = users.id
-  WHERE posts.posted_on = ?;
+  WHERE posts.posted_on = ?
+;

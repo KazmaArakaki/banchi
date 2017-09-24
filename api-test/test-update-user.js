@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/users/1", {
+fetch("http://localhost:3000/api/users/1", {
   "method": "PUT",
   "headers": (function(headers) {
     headers = new Headers();

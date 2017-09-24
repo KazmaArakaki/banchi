@@ -21,4 +21,5 @@ VALUES (
   'Yep'
 ), (
   'Mrxoa6vR0tnVPAZ'
-);
+)
+;

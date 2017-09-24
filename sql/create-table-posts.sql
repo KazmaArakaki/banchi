@@ -5,4 +5,5 @@ CREATE TABLE posts (
   posted_on INTEGER NOT NULL, /* 投稿先スレッドID */
   posted_by INTEGER NOT NULL, /* 投稿者ユーザーID */
   posted_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP /* 投稿日時 */
-);
+)
+;

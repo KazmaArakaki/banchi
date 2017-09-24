@@ -6,10 +6,10 @@ import createUser from "./api/create-user";
 import updateUser from "./api/update-user";
 
 export default app => {
-  app.get("/threads/:id/posts", getPosts);
-  app.get("/threads/:latitude,:longitude", getThreads);
-  app.post("/threads/:id/posts", createPost);
-  app.post("/threads", createThread);
-  app.post("/users", createUser);
-  app.put("/users/:id", updateUser);
+  app.get("/api/threads/:id/posts", getPosts);
+  app.get("/api/threads/:latitude,:longitude", getThreads);
+  app.post("/api/threads/:id/posts", createPost);
+  app.post("/api/threads", createThread);
+  app.post("/api/users", createUser);
+  app.put("/api/users/:id", updateUser);
 }

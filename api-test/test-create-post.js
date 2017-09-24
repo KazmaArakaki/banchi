@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/threads/1/posts", {
+fetch("http://localhost:3000/api/threads/1/posts", {
   "method": "POST",
   "headers": (function(headers) {
     headers = new Headers();

@@ -58,7 +58,7 @@ function getPosts(threadId) {
                   },
                   "reply_to": postResult.postReplyTo,
                   "posted_at": postResult.postPostedAt
-                }
+                };
               })
             });
           });
