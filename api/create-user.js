@@ -2,10 +2,7 @@ import fs from "fs";
 import mysql from "mysql";
 
 export default (request, response) => {
-  const name = request.body.name;
-  const image = request.body.image || null;
-
-  name = name || Array.from(new Array(15)).map(() => {
+  const name = request.body.name || Array.from(new Array(15)).map(() => {
     return Array.from(new Array(26)).map(
         (c, i) => String.fromCharCode("A".charCodeAt(0) + i)
     ).concat(Array.from(new Array(26)).map(
@@ -13,7 +10,8 @@ export default (request, response) => {
     )).concat(Array.from(new Array(10)).map(
         (n, i) => String(n)
     ))[Math.floor(Math.random() * 62)];
-  }).join("");
+  }).join("");;
+  const image = request.body.image || null;
 
   createUser({
     name,
