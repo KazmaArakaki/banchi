@@ -23,17 +23,17 @@ function getThreads(latitude, longitude) {
       getSQL("get-threads.sql").then(sql => {
         const getThreadsSql = mysql.format(sql, [latitude, longitude, latitude]);
 
-        connection.query(getThreadsSql, (error, threadsResult, fields) => {
-          resolve(threadsResult.map(threadResult => {
+        connection.query(getThreadsSql, (error, result, fields) => {
+          resolve(result.map(resultItem => {
             return {
-              "id": threadResult.threadId,
-              "title": threadResult.threadTitle,
-              "latitude": threadResult.latitude,
-              "longitude": threadResult.longitude,
-              "description": threadResult.threadDescription,
+              "id": resultItem.threadId,
+              "title": resultItem.threadTitle,
+              "latitude": resultItem.latitude,
+              "longitude": resultItem.longitude,
+              "description": resultItem.threadDescription,
               "category": {
-                "id": threadResult.categoryId,
-                "name": threadResult.categoryName
+                "id": resultItem.categoryId,
+                "name": resultItem.categoryName
               }
             };
           }));
