@@ -10,28 +10,29 @@
 <body>
   <!-- ヘッダー -->
   <div class="header">
-    <img src="image/banchi.png" alt="タイトルロゴ">
+    <div class="header_userimage"></div>
+
+    <div class="header_logo">
+      <img class="header_logo_image" src="image/banchi.png" alt="タイトルロゴ">
+    </div>
+
+    <div class="header_menu"></div>
   </div>
   <!-- ヘッダーここまで -->
 
   <!-- メイン -->
   <div class="main">
-    <img src="image/sotowaku.png" alt="外枠">
+    <div class="mapcontrol_top" id="build">
+      <button>掲示板を立てる</button>
+    </div>
 
-    <span id="build">
-      <input type="submit" name="build" value="掲示板を立てる">
-    </span>
+    <div id="map" div="map"></div>
 
-    <span id="map" class="map"></span>
-
-    <button onclick="getPosition();">
-      <img src="image/chikyugibt.png" alt="地球儀ボタン">
-    </button>
+    <div class="mapcontrol_bottom">
+      <button onclick="getPosition();"></button>
+    </div>
   </div>
   <!-- メインここまで -->
-
-  <!-- フッター -->
-  <!-- フッターここまで -->
 
   <script src="./script.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQS8nfNRA3a8ipVPRIHSZ_8T7YOfAM0P4&callback=initMap"></script>
