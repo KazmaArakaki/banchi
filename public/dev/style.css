@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+body    {
+    font-family: 'メイリオ',
+                'Hiragino Kaku Gothic Pro',
+                sans-serif;
+}
+
+/* ヘッダーここから */
+
+.header {
+    position: relative;
+    width: 100%;
+    /* margin-top: 5%; */
+    padding-top: 5%;
+    height: 100%;
+}
+
+.header img {
+    position: absolute;
+    margin: auto;
+    width: 50%;
+    left: 26%;
+}
+
+/* ヘッダーここまで */
+
+/* メインここから */
+
+.main {
+    position: relative;
+    padding-top: 15%;
+    height: 100%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    position: relative;
+    z-index: 0;
+}
+
+span {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    right: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    width: 84%;
+    height: 81.7%;
+    z-index: 1;
+}
+.main button {
+    padding: 0;
+    border: none;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3%;
+    margin: auto;
+    width: 30%;
+    z-index: 2;
+}
+
+#build {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 11.5%;
+    width: 30%;
+    margin: auto;
+}
+
+/* メインここまで */
