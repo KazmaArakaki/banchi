@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=320,user-scalable=no" />
-    <link rel="stylesheet" href="style.css">
-    <title>地図×掲示板</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=320,user-scalable=no" />
+  <link rel="stylesheet" href="style.css">
+  <title>地図×掲示板</title>
 </head>
 <body>
-    <!-- ヘッダー -->
-    <div class="header">
-            <img src="image/banchi.png" alt="タイトルロゴ">
-            
-    </div>
-    <!-- ヘッダーここまで -->
+  <!-- ヘッダー -->
+  <div class="header">
+    <img src="image/banchi.png" alt="タイトルロゴ">
+  </div>
+  <!-- ヘッダーここまで -->
 
-    <!-- メイン -->
-    <div class="main">
-            <img src="image/sotowaku.png" alt="外枠">
-            <span id="build"><input type="submit" name="build" value="掲示板を立てる">></span>
-            <span id="map" class="map"></span>
-            <button onclick="getPosition();">
-                <img src="image/chikyugibt.png" alt="地球儀ボタン">
-            </button>
-    </div>
-    <!-- メインここまで -->
+  <!-- メイン -->
+  <div class="main">
+    <img src="image/sotowaku.png" alt="外枠">
 
-    <!-- フッター -->
-    <!-- フッターここまで -->
+    <span id="build">
+      <input type="submit" name="build" value="掲示板を立てる">
+    </span>
 
-    <script src="./script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQS8nfNRA3a8ipVPRIHSZ_8T7YOfAM0P4&callback=initMap"></script>
+    <span id="map" class="map"></span>
+
+    <button onclick="getPosition();">
+      <img src="image/chikyugibt.png" alt="地球儀ボタン">
+    </button>
+  </div>
+  <!-- メインここまで -->
+
+  <!-- フッター -->
+  <!-- フッターここまで -->
+
+  <script src="./script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQS8nfNRA3a8ipVPRIHSZ_8T7YOfAM0P4&callback=initMap"></script>
 </body>
 </html>
