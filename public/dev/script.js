@@ -1,5 +1,12 @@
 function initMap() {
   /**
+   * ユーザー情報
+   */
+  const user = {
+    "position": {}
+  };
+
+  /**
    * DOM要素の取得
    */
   const mapContainer = document.getElementById("map");
@@ -39,19 +46,22 @@ function initMap() {
       }
     });
 
-    navigator.geolocation.getCurrentPosition(position => {
-      map.setCenter({
-        "lat": position.coords.latitude,
-        "lng": position.coords.longitude
-      });
-    }, null, geolocationConfig);
-
     navigator.geolocation.watchPosition(position => {
       console.log(position, userPositionMarker);
 
+      if(!user.position.latitude || !user.position.longitude) {
+        map.setCenter({
+          "lat": position.coords.latitude,
+          "lng": position.coords.longitude
+        });
+      }
+
+      user.position.latitude = position.coords.latitude;
+      user.position.longitude = position.coords.longitude;
+
       userPositionMarker.setPosition({
-        "lat": position.coords.latitude,
-        "lng": position.coords.longitude
+        "lat": user.position.latitude,
+        "lng": user.position.longitude
       });
     }, null, geolocationConfig);
   });
@@ -60,6 +70,9 @@ function initMap() {
    * 現在地取得ボタンにイベントリスナを追加
    */
   getPositionButton.addEventListener("click", event => {
-    
+    map.setCenter({
+      "lat": user.position.latitude,
+      "lng": user.position.longitude
+    })
   });
 }
