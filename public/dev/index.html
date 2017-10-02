@@ -11,14 +11,13 @@
     <title>地図×掲示板</title>
 </head>
 <body>
-  <!-- ヘッダー -->
-  <div class="header">
-    <div class="header_userimage"></div>
-
-    <div class="header_logo">
-      <img class="header_logo_image" src="image/banchi.png" alt="タイトルロゴ">
+    <!-- ヘッダー -->
+    <div class="header">
+            <img src="image/banchi.png" alt="タイトルロゴ">
+            
     </div>
-    
+    <!-- ヘッダーここまで -->
+
     <!-- メイン -->
     <div class="main">
             <img src="image/sotowaku.png" alt="外枠">
@@ -28,14 +27,10 @@
                 <img src="image/chikyugibt.png" alt="地球儀ボタン">
             </button>
     </div>
+    <!-- メインここまで -->
 
-    <div id="map" div="map"></div>
-
-    <div class="mapcontrol_bottom">
-      <button onclick="getPosition();"></button>
-    </div>
-  </div>
-  <!-- メインここまで -->
+    <!-- フッター -->
+    <!-- フッターここまで -->
 
     <script src="./script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQS8nfNRA3a8ipVPRIHSZ_8T7YOfAM0P4&callback=initMap"></script>
